@@ -9,7 +9,7 @@ android:
   - tools
   - platform-tools
   - build-tools-23.0.3
-  - android-23
+  - android-21
   - extra-android-m2repository
   - sys-img-${ANDROID_ABI}-${ANDROID_TARGET}
 licenses:
