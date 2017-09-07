@@ -6,21 +6,12 @@ env:
     - ANDROID_ABI=google_apis/armeabi-v7a
 android:
   components:
+  - tools
   - platform-tools
-    - tools
-    - build-tools-$ANDROID_BUILD_TOOLS_VERSION
-    - android-$ANDROID_API_LEVEL
-    # For Google Maps API v1
-    - addon-google_apis-google-$ANDROID_API_LEVEL
-    # Google Play Services
-    - extra-google-google_play_services
-    # Support library
-    - extra-android-support
-    # Latest artifacts in local repository
-    - extra-google-m2repository
-    - extra-android-m2repository
-    # Specify at least one system image
-    - sys-img-armeabi-v7a-addon-google_apis-google-$ANDROID_API_LEVEL
+  - build-tools-23.0.3
+  - android-23
+  - extra-android-m2repository
+  - sys-img-${ANDROID_ABI}-${ANDROID_TARGET}
 licenses:
   - 'android-sdk-license-.+'
 before_script:
